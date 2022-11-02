@@ -6,7 +6,7 @@ class UserRegistrationService @Inject constructor(
 // this @Inject annotation tell us when you need the object of
 // this class you can call the constructor of this class
     private val userRepository: UserRepository,
-    private val emailService: EmailService,
+    private val emailService: NotificationService,
 ) {
     //  Now we have to use manual dependency Injection. by passing these commented object to the constructor of UserRegistrationClass
     //    private val userRepository = UserRepository()
@@ -25,7 +25,7 @@ class UserRegistrationService @Inject constructor(
 
     fun userRegistration(email: String, password: String) {
         userRepository.saveUser(email, password)
-        emailService.send(email, "vicay0001@gmail.com", "User Registered")
+//        emailService.send(email, "vicay0001@gmail.com", "User Registered")
     }
 
 }
