@@ -1,6 +1,5 @@
 package com.learningacademy.dagger2fullflashproject
 
-import android.nfc.Tag
 import android.util.Log
 import com.learningacademy.dagger2fullflashproject.Constants.TAG
 import javax.inject.Inject
