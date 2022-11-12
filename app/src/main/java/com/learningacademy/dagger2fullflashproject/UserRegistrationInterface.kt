@@ -4,7 +4,7 @@ import dagger.BindsInstance
 import dagger.Component
 
 @ApplicationScope
-@Component(modules = [UserRepositoryModule::class,NotificationServiceModule::class])
+@Component(modules = [UserRepositoryModule::class,NotificationServiceModule::class,AnalyticsModule::class])
 interface UserRegistrationInterface {
 
     // no need of above two function to tell dagger to create that object... in case of using Inject function.
