@@ -8,8 +8,9 @@ import javax.inject.Named
 class NotificationServiceModule {
     @Named ("message")
     @Provides                 // provide means it provides the object of required dependency
-    fun getMessageService():NotificationService{
-        return MessageService()
+    fun getMessageService(retryCount : Int):NotificationService{     //  here we requested to dagger to pass the retry count
+                                                                   // value  here for that we have created factory
+        return MessageService(retryCount)                      // this is how dagger provide us value on run time to pass with constructor.
     }
 
     @Named ("email")                // named qualifier

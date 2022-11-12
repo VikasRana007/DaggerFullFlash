@@ -24,11 +24,11 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
 
         // this is done by Dagger.
-        val component = DaggerUserRegistrationInterface.builder().build()
+        val component = DaggerUserRegistrationInterface.factory().create(3)
 
         // now we are using inject method of component interface  to get the instance of following
         component.inject(this)
-        userRegistrationService.userRegistration("vicay0001@gmail.com", "12345678890")
+        userRegistrationService.userRegistration("vicay0001@gmail.com", "1234567890")
 
     }
 
