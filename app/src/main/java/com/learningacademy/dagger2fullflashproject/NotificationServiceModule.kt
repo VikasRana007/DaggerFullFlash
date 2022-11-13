@@ -10,9 +10,9 @@ class NotificationServiceModule {
     @ActivityScope
     @Named("message")
     @Provides // provide means it provides the object of required dependency
-    fun getMessageService(retryCount: Int): NotificationService {     //  here we requested to dagger to pass the retry count
+    fun getMessageService(/*retryCount: Int*/): NotificationService {     //  here we requested to dagger to pass the retry count
         // value  here for that we have created factory
-        return MessageService(retryCount)                      // this is how dagger provide us value on run time to pass with constructor.
+        return MessageService(3)                      // this is how dagger provide us value on run time to pass with constructor.
     }
 
     @Named("email")                // named qualifier

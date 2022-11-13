@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
 
         val appComponent = (application as UserApplication).appComponent
-        val userRegistrationInterface = DaggerUserRegistrationInterface.factory().create(3,appComponent)
+        val userRegistrationInterface = appComponent.getUserRegistrationInterface()/*.create(3)*/
         userRegistrationInterface.inject(this)
         userRegistrationService.userRegistration("vicay0001@gmail.com", "1234567890")
 

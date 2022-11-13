@@ -5,7 +5,7 @@ import javax.inject.Named
 
 class UserRegistrationService @Inject constructor(
     private val userRepository: UserRepository,
-   @Named("message") private val notificationService : NotificationService,) {
+   @Named("message") private val notificationService : NotificationService) {
 
     fun userRegistration(email: String, password: String) {
         userRepository.saveUser(email, password)
