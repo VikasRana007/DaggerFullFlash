@@ -7,6 +7,8 @@ import dagger.Provides
 /**
  * We have use module to create the object for like as abstract classes , interface, builder pattern classes object etc.
  */
+
+
 @Module
 abstract  class UserRepositoryModule {
 
@@ -26,6 +28,7 @@ abstract  class UserRepositoryModule {
 //    }
 
     @Binds
+    @ActivityScope
     abstract fun getSQLRepository(sqlRepository: SQLRepository):UserRepository
     // We Can also use @Bind annotation here as shown in the abstract function...
 
